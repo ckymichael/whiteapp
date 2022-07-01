@@ -2,8 +2,8 @@ logging:
   file:
     name: myapplication.log
   level:
-    root: DEBUG
-    org.springframework.web: DEBUG
+    root: INFO
+    org.springframework.web: INFO
 
 server:
   port: 8181
@@ -11,7 +11,7 @@ server:
 management:
   security:
     enabled: false
-  port: 8888
+  port: 8181
   context-path: /monitor
   endpoints:
     web:
@@ -22,3 +22,8 @@ info:
   app:
     name:springboot-actuator
     version:1.0
+
+springdoc:
+  show-actuator: true
+  swagger-ui.use-root-path: true
+  default-produces-media-type: application/json
